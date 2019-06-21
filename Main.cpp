@@ -216,6 +216,8 @@ void PreOrden(NodoArbol *nodo, string rango, vector<NodoArbol *> &MilitarTipoAct
 void PreOrden2(NodoArbol *nodo, vector<string> &listado)
 {
     cout << nodo->getMilitar()->getNombre() << "-" << nodo->getMilitar()->getRango() << endl;
+
+
     listado.push_back(nodo->getMilitar()->getNombre() + "-" + nodo->getMilitar()->getRango());
     for (int i = 0; i < nodo->getNodosHijos().size(); i++)
     {
@@ -266,12 +268,12 @@ void Archivo(NodoArbol *nodo)
     }
     cout << "Se creo exitosamente" << endl;
     file.close();
-    initscr();
+    /*initscr();
     for (int i = 0; i < listado.size(); ++i)
     {
-        /*char lista[100] =listado[i];
+        char lista[100] =listado[i];
         printw(lista);
-        refresh();*/
+        refresh();
     }
     noecho();
     init_pair(1, COLOR_GREEN, COLOR_BLACK);
@@ -302,5 +304,5 @@ void Archivo(NodoArbol *nodo)
         }
         refresh();
     }
-    endwin();
+    endwin();*/
 }
